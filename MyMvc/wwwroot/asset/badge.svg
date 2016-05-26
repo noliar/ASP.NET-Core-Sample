@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="{1}" height="20">
+    <mask id="a">
+        <rect width="{1}" height="20" rx="0" fill="#fff" />
+    </mask>
+    <g mask="url(#a)">
+        <path fill="#555" d="M0 0h136v20H0z" />
+        <path fill="#007ec6" d="M136 0h{2}v20H136z" />
+    </g>
+    <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+        <text x="5" y="15" fill="#010101" fill-opacity=".3">compatible cli version</text>
+        <text x="5" y="14">compatible cli version</text>
+        <text x="140" y="15" fill="#010101" fill-opacity=".3">{0}</text>
+        <text x="140" y="14">{0}</text>
+    </g>
+</svg>
