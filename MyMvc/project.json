@@ -41,7 +41,7 @@
     },
     "Microsoft.EntityFrameworkCore.Tools": {
       "version": "1.0.0-preview1-final",
-      "imports": "portable-net45+win8"
+      "imports": "portable-net451+win8"
     }
   },
 
