@@ -2,6 +2,6 @@
     "name": "HelloMvc",
     "description": "ASP.NET Core sample app",
     "env": {
-	"BUILDPACK_URL": "https://github.com/noliar/dotnet-buildpack.git#cli-using-script"
+	"BUILDPACK_URL": "https://github.com/noliar/dotnet-buildpack.git"
     }
 }
