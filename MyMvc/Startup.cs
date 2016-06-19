@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DevZH.Heroku.Utils.Database;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -34,7 +35,7 @@ namespace MyMvc
         {
             // Add framework services.
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(Configuration?["DefaultConnection"]??Configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(Configuration?["DATABASE_URL"]?.ToConnectionString() ?? Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

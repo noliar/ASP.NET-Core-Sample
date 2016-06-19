@@ -28,7 +28,8 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc2-final",
     "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0-rc2-release1",
-    "sqlite": "3.12.2-*"
+    "sqlite": "3.12.2-*",
+    "DevZH.Heroku.Utils": "1.0.1" 
   },
 
   "tools": {
