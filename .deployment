@@ -1,2 +1,3 @@
 [config]
 project = MyMvc/project.json
+use_reverse_proxy = true
