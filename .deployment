@@ -1,3 +1,0 @@
-[config]
-project = project.json
-use_reverse_proxy = true
