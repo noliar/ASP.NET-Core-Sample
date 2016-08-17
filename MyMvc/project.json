@@ -69,7 +69,8 @@
 
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "outputName": "MvcTest"
   },
 
   "runtimeOptions": {
