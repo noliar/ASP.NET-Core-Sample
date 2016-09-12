@@ -34,8 +34,17 @@ namespace MyMvc
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(Configuration?["DATABASE_URL"]?.ToConnectionString() ?? Configuration.GetConnectionString("DefaultConnection")));
+            var dbUrl = Configuration?["DATABASE_URL"];
+            if (string.IsNullOrEmpty(dbUrl))
+            {
+                services.AddDbContext<ApplicationDbContext>(options =>
+                        options.UseSqlite(Configuration.GetConnectionString("SqliteConnection")));
+            }
+            else
+            {
+                services.AddDbContext<ApplicationDbContext>(options =>
+                        options.UseNpgsql(dbUrl.ToConnectionString()));
+            }
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
