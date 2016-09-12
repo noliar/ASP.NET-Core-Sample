@@ -93,7 +93,7 @@
   },
 
   "scripts": {
-    "prepublish": [ "dotnet ef database update || true", "bower install", "dotnet bundle" ],
+    "prepublish": [ "ef.sh || true", "bower install", "dotnet bundle" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }
